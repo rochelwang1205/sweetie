@@ -1,3 +1,7 @@
+//general
+.df{
+  display: flex;
+}
 .wrapper{
     max-width: 1024px;
     margin: 0 auto;
@@ -48,7 +52,7 @@ header{
   .navbar10 {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 50%;
     margin-right: 10px;
     @include padS{
         width: 100%;
@@ -72,8 +76,8 @@ header{
     margin: 0 auto;
     box-sizing: border-box;
     justify-content: space-between;
+    width: fit-content;
     gap: 20px;
-    max-width: 620px;
 
     .card {
       box-sizing: border-box;
@@ -81,10 +85,8 @@ header{
       text-align: center;
       outline: 1px solid #e7eeea;
       position: relative;
+      max-width: 300px;
       margin: 0 auto;
-      @include mobile{
-        max-width: 300px;
-      }
 
       .tag {
         position: absolute;
@@ -96,6 +98,7 @@ header{
         padding: 5px;
         top: 0;
         left: 20px;
+        line-height: 1.5;
       }
 
       .favorite {
@@ -146,3 +149,82 @@ header{
         display: none;
     }
   }
+
+//pagination
+.pagination {
+  display: flex;
+  justify-content: right;
+  margin: 30px;
+  max-width: 940px;
+  @include laptopS{
+    justify-content: center;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid #e7eeea;
+    color:#3f5c46;
+    font-weight: 600;
+
+    &:hover {
+      background-color: #3f5c46;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    &.active-d {
+      background-color: #3f5c46;
+      color: white;
+    }
+  }
+}
+// subscription
+.subscription {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3f5c46;
+  padding: 30px 122px;
+  color: #fff;
+  font-size: 24px;
+  @include laptopS{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 10%;
+  }
+
+  .callToAction {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 40px;
+      margin-right: 20px;
+    }
+  }
+  .fillIn{
+      padding: 16px ;
+      background-color: #EAF0ED;
+      display: flex;
+      align-items: center;
+    label{
+      color: #3f5c46;
+    }
+    input{
+      border: none;
+      background-color: transparent;
+    }
+  }
+  .send{
+    color: #3f5c46;
+    background-color: #FFE180;
+    padding: 20px 24px; 
+  }
+}
